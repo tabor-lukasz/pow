@@ -18,7 +18,7 @@ impl Solution {
 fn solve(begin: u8, end: u8, mut data: Vec<u8>, solution: Arc<RwLock<Option<Solution>>>) {
     let mut hasher = Sha256::new();
 
-    // This 4x for loops could be replaced by single u32 write to make fewer writes
+    // This 4x for loops could be replaced by single u32 write to make fewer writes and look much less ugly
     for b0 in begin..=end {
         data[0] = b0;
         for b1 in 0..0xFFu8 {
